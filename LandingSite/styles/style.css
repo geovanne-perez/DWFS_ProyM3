@@ -110,8 +110,9 @@ body{
     left: 0;
     background-color: #fff;
     overflow-x: hidden;
-    padding-top: 80px;    
+    padding-top: 100px;    
     transition: 0.3s cubic-bezier(.36,-0.01,0,.77);
+    z-index:5;
   }
   .closebtn {
     position: absolute;
@@ -175,6 +176,8 @@ text-rendering: auto;
     display: flexbox;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
+    align-items: center;
 }
 .jumbotron > img{
     width: 100%;
@@ -188,9 +191,12 @@ text-rendering: auto;
     font-family: 'Bebas Neue', sans-serif;
     text-transform: uppercase;
     color: white;    
-    position:absolute;top:20vw;left:0;z-index:1;
-    padding: 50px;
-    text-align: center;
+    position:absolute;
+    padding: 10px 20%;
+    top:20vw;
+    left:0;
+    z-index:1;
+    
     
 }
 .jumbotron p{
@@ -199,13 +205,16 @@ text-rendering: auto;
     font-family: 'Ubuntu Mono', monospace;
     padding: 10px 20%;
     color: white;
-    position:absolute;top:40vw;left:0;z-index:1
+    position:absolute;
+    top:40vw;
+    left:0;
+    z-index:1
 }
 .BodyGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px 10px;
-    max-width: 1200px;
+    width: 100%;
     color: #fff;
 }
 .BodyGrid .CardGrid{
@@ -267,7 +276,7 @@ text-rendering: auto;
 .CardGridText {
     font-size: 1.5rem;
     font-family: 'Ubuntu Mono', monospace;
-    background-color: #e9eaee;
+    background-color: #dbdbdb;
     color: #313131;
     text-align: center;
     line-height: 25px;
@@ -283,7 +292,7 @@ text-rendering: auto;
   grid-template-columns: repeat(3, 1fr);  
   grid-gap: 30px 30px;
   padding: 30px;
-  background-color: #e9eaee;
+  background-color: #dbdbdb;
 }
 .ServicesGrid .card{
   display:grid;
@@ -330,49 +339,270 @@ box-shadow: 1px 10px 9px 1px rgba(0,0,0,0.1);
 }
 
 /* SolutionsGrid*/
-.solutionsGrid{
+.Products{
   max-width: 100%;
   margin: 0%;
   padding: 0%;
 }
 
-.solutionsGrid h1{
+.Products h1{
   font-size: 2.0rem;
   font-family: 'Ubuntu Mono', monospace;
   font-weight: bold;
   color: white;
   text-align: center;
   text-justify: center;
-  padding: 5% 10% 0% 10%;
+  padding: 5% 10% 5% 10%;
   text-transform: uppercase;  
   max-width: 100%;
 }
-.solutionsGrid .ProductGrid{
+.ProductsGrid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-gap: 15px 15px;
   max-width: 100%;
   margin: 0%;
-  padding: 5%;
+  padding: %;
 }
 
-.ProductGrid *{
+.ProductsGrid *{
   max-width: 100%;
 }
 
-.ProductGrid .CardGrid{
+.ProductsGrid .Card{
   display: flexbox;
   flex-direction: row;
-  justify-content: space-between;
-  background-color: #073ff6;
-  color: #000;
+  justify-content: space-around;
+  align-content: center;
+  background-color: #e9e9e9;
+  color: #141414;
+  border-radius: 30px;
+  
 }
-
-.ProductGrid * .cardImg *{
+.ProductsGrid .Card .CardTitle{
   border-radius: 0px;
   width: 100%;
-  padding-bottom: 5px;
+  padding-top: 10px;
+  font-size: 1.5rem;
+  font-family: 'Bebas Neue', sans-serif;
 }
-.ProductGrid .CardGrid .CardGridTitle{
+.ProductsGrid .Card .CardImg{
+  border-radius: 0px;
+  width: 100%;
+  height: 80%;
+  padding: 20px 0px 0px 0px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
+
+.ProductsGrid .Card .CardImg:hover{
+ transform: scale(1.3);
+ padding: 0px;
+ margin: 0px;
+ border-top-right-radius: 10px;
+ border-top-left-radius: 10px;
+ border-bottom-left-radius: 10px;
+ border-bottom-right-radius: 10px;
+ border-style: solid;
+ border-width: 3px;
+ border-color: #fff;
+ position: relative;
+  top: inherit;
+  animation-name: ZoomIn;
+  animation-duration: 2s;
+  cursor: pointer;
+}
+.ProductsGrid .Card .CardImg:{
+  transform: scale(1.3);
+  padding: 0px;
+  margin: 0px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-style: solid;
+  border-width: 3px;
+  border-color: #fff;
+  position: relative;
+   top: inherit;
+   animation-name: ZoomIn;
+   animation-duration: 2s;
+   cursor: pointer;
+ }
+@keyframes ZoomIn {
+  from {transform: scale(1.0)}
+  to {transform: scale(1.3)}
+}
+
+@keyframes ZoomOut {
+  from {transform: scale(1.0)}
+  to {transform: scale(1.3)}
+}
+
+.Clients *{
+  margin: 0%;
+  padding: 0%;
+  max-width: 100%;
+  width: 100%;
+}
+.Clients{
+  max-width: 80%;
+  margin-top: 50px;
+  padding-left: 10%;
+  padding-right: 10%;
+  padding-bottom: 100px;
+  width: 100%;
+ display: grid;
+ grid-template-columns: repeat(5,1fr);
+ grid-template-rows: repeat(2,1fr);
+ grid-gap: 0px 50px; 
+ background-color: #fff;
+}
+.Clients .CardTitle{
+  max-width: 100%;
+  border-radius: 0px;
+  width: 100%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  font-size: 1.5rem;
+  font-family: 'Bebas Neue', sans-serif;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  color: #797979;
+}
+.Clients .CardImg{  
+  max-width:100%;
+  max-height: 100%;
+  height: auto;
+  image-rendering:auto;
+  align-self: center;
+  border-radius: 0%;
+  background-color: #fff;
+  background: #fff;
+  color: #fff;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+.footer-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contacto {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.contacto li {
+  margin: 0 10px;
+}
+
+.contacto li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+  .Clients {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+
+  .Clients .CardTitle {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .ProductsGrid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 20px;
+    max-width: 80%;
+    padding: 10%;
+  }
+  .ProductsGrid .Card {
+    padding: 15px;
+  }
+  .CardGridText{
+    font-size: 1.0rem;
+  }
+  .ServicesGrid{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 20px;
+    max-width: 80%;
+    padding: 10%;
+  }
+  .BodyGrid{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 20px;
+    max-width: 80%;
+    padding: 0% 10%;
+    margin: 0%;
+    align-items: center;
+  }
+  #BodyText1{
+    grid-row: 1;
+  }
+  #BodyImg1{
+    grid-row: 2;
+  }
+  #BodyText2{
+    grid-row: 3;
+  }
+  #BodyImg2{
+    grid-row: 4;
+  }
+
+  .jumbotron{
+    display: block;
+    margin-top: 50px;
+    width: auto;
+    height: 200px;
+  }
+  .jumbotron img{
+    margin-bottom: 200px ;
+    margin-top: 50px;
+    width: 100%;
+    max-height: 100%;
+    height: auto ;
+  }
+  .jumbotron h1{
+    margin-top: 50px;
+    font-size: 1.0rem;
+    padding: 10px 10%;
+    top:10vw;
+  }
+  .jumbotron p{
+    margin-top: 100px;
+    font-size: 1.0rem;
+    padding: 10px 10%;
+    top:10vw;
+  }
+  
+  .sidebar {
+  height: 100%;
+  width: 1vw;
+  position: fixed;
+  background-color: #fff;
+  overflow-x: hidden;
+  padding-top: 100px;    
+  transition: 0.3s cubic-bezier(.36,-0.01,0,.77);
+}
+}
+
