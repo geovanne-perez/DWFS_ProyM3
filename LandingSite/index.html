@@ -5,19 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LTA Integrated Services</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 </head>
 <header>
-    <img src="img/LTALogo.png" alt="Logo" class="imgLogo">
-    <h1>LTA Integrated Solutions</h1>
-    <a>Login</a>
+    <div class="topheader">
+        <a href="javascript:void(0)" class="fa-solid fa-bars openbtn" onclick="toggleNav()"></a>
+    
+        <img src="img/LTALogo.png" alt="Logo" class="imgLogo">
+        <img src="img/LTA.png" alt="LTA" class="CentralLogo">
+        <div class="userlogin">
+            <i class="fa-solid fa-user"></i>
+            <a>Login</a>
+        </div>
+    </div>
+    
 </header>
 <div class="sidebar" id="mySidebar">
     <ul>
-        <li><a href="javascript:void(0)" class="fa-solid fa-bars closebtn" onclick="closeNav()"></a></li>
         <li><a class="active" href="#LTA">LTA</a></li>
         <li><a href="#Solutions">Integrated Solutions</a></li>
         <li><a href="#WISEDemo">WISE Demo</a></li>
@@ -26,31 +34,38 @@
     </ul>
 </div>
 <body>
-    <div id="main">
-    <li><a href="javascript:void(0)" class="fa-solid fa-bars openbtn" onclick="openNav()"></a></li>
-    <div class="BodyGrid">
-        <div class="gridImg">
-            <img src="img/LTA.png" alt="LTA">
+    
+    <div class="jumbotron">
+        <img src="https://secureservercdn.net/104.238.69.231/ygr.6df.myftpupload.com/wp-content/uploads/2019/05/Digital-Sistems-v1.jpg?time=1598635150" alt="jumbotron">
+        <h1>Innovación Efectiva para una Nueva Era</h1>
+        <p>Apoyamos a nuestros clientes en la implementación de nuevas tecnologías para la optimización de sistemas productivos con enfoque Industria 4.0</p>
+    </div>
+    <div class="BodyGrid">        
+        <div class="CardGrid">
+            <h2 class="CardGridTitle">Automatización de Sistemas Productivos</h2>
+            <p>Servicios integrales de automatización para proyectos Multi-estándar, a través de metodologías únicas y garantizadas enfocadas en el cumplimiento de los objetivos de nuestros clientes.</p>
         </div>
-        <div class="gridCard">
-            <h2 class="gridCardTitle">LTA</h2>
+        <div class="gridImg">
+        <img src="https://lta.com.mx/wp-content/uploads/2019/05/IMG_SERVICIO_01.jpg?id=24984" alt="LTA" class="CentralLogo">
+        </div>
+        <div class="gridImg">
+            <img src="https://www.kuka.com/-/media/kuka-corporate/images/home/stage/kuka-robot-systems.jpg?rev=65074bf713a74a8ea6b08da65d068946&w=1400&hash=6E6DBB77432C3395E47F2A539F6EEE86" alt="kukarobot">
+        </div>
+        <div class="CardGrid">
+            <h2 class="CardGridTitle">Quiénes somos?</h2>
             <ul>
+                <li>Empresa Mexicana</li>
                 <li>6 años de experiencia en el mercado</li>
                 <li>Más de 50 años de experiencia conjunta</li>
                 <li>Pasión por la excelencia</li>
             </ul>
         </div>
-        <div class="gridCard">
-            <h2 class="gridCardTitle">Automatización de Sistemas Productivos</h2>
-            <p>Servicios integrales de automatización para proyectos Multi-estándar, a través de metodologías únicas y garantizadas enfocadas en el cumplimiento de los objetivos de nuestros clientes.</p>
-        </div>
-        <div class="gridImg">
-            <img src="https://www.kuka.com/-/media/kuka-corporate/images/home/stage/kuka-robot-systems.jpg?rev=65074bf713a74a8ea6b08da65d068946&w=1400&hash=6E6DBB77432C3395E47F2A539F6EEE86" alt="kukarobot">
-        </div>
+        
     </div>
-    <div>
-        <p>Ofrecemos los servicios de automatización de forma integral en las distintas fases de los proyectos como lo son: Puesta en marcha virtual, Puesta en marcha en sitio,consultoría y optimización, soporte técnico y capacitación a través de metodologías únicas y garantizadas que salvaguardan la integridad de los equipos.</p>
-        <div class="card" id="Card1">
+    <p class="CardGridText">Ofrecemos los servicios de automatización de forma integral en las distintas fases de los proyectos como lo son: Puesta en marcha virtual, Puesta en marcha en sitio,consultoría y optimización, soporte técnico y capacitación a través de metodologías únicas y garantizadas que salvaguardan la integridad de los equipos.</p>
+       
+    <div class="ServicesGrid">
+         <div class="card" id="Card1">
             <h3>Multimarca</h3>
             <ul>
                 <li>Siemens</li>
@@ -78,55 +93,54 @@
                 <li>Aplicaciones Especiales</li>
                 <li>Reconditioning</li>
             </ul>
+        </div>
     </div>
-
-    <div>
-        <h2>Soluciones</h2>
-            <div class="ProductGrid">
-                <div class="gridCard">
-                    <h2 class="gridCardTitle">WISE</h2>
-                    <div class="cardImg">
-                        <img src="img/StockIndustrial1.jpg" alt="WISE"/>
-                    </div>
+    <div class="solutionsGrid">
+        <h1>Soluciones</h1>
+        <div class="ProductGrid">
+            <div class="CardGrid">
+                <h2 class="CardGridTitle">WISE</h2>
+                <div class="cardImg">
+                    <img src="img/StockIndustrial1.jpg" alt="WISE"/>
                 </div>
-                <div class="gridCard">
-                    <h2 class="gridCardTitle">SWIFT</h2>
-                    <div class="cardImg">
-                        <img src="img/StockIndustrial2.jpg" alt="Swift Project img"/>
-                    </div>
+            </div>
+            <div class="CardGrid">
+                <h2 class="CardGridTitle">SWIFT</h2>
+                <div class="cardImg">
+                    <img src="img/StockIndustrial2.jpg" alt="Swift Project img"/>
                 </div>
-                <div class="gridCard">
-                    <h2 class="gridCardTitle">VANGARD</h2>
-                    <div class="cardImg">
-                        <img src="img/StockIndustrial3.jpg" alt="Vangard Project img"/>
-                    </div>
+            </div>
+            <div class="CardGrid">
+                <h2 class="CardGridTitle">VANGARD</h2>
+                <div class="cardImg">
+                    <img src="img/StockIndustrial3.jpg" alt="Vangard Project img"/>
                 </div>
-                <div class="gridCard">
-                    <h2 class="gridCardTitle">LOGBOOK</h2>
-                    <div class="cardImg">
-                        <img src="img/StockIndustrial4.jpg" alt="Logbook Project img"/>
-                    </div>
+            </div>
+            <div class="CardGrid">
+                <h2 class="CardGridTitle">LOGBOOK</h2>
+                <div class="cardImg">
+                    <img src="img/StockIndustrial4.jpg" alt="Logbook Project img"/>
                 </div>
-                <div class="gridCard">
-                    <h2 class="gridCardTitle">IAS</h2>
-                    <div class="cardImg">
-                        <img src="img/StockIndustrial5.jpg" alt="IAS Project img"/>
-                    </div>
+            </div>
+            <div class="CardGrid">
+                <h2 class="CardGridTitle">IAS</h2>
+                <div class="cardImg">
+                    <img src="img/StockIndustrial5.jpg" alt="IAS Project img"/>
                 </div>
-                <div class="gridCard">
-                    <h2 class="gridCardTitle">DBSnapshot</h2>
-                    <div class="cardImg">
-                        <img src="img/StockIndustrial6.jpg" alt="DBSnaphot Project img"/>
-                    </div>
+            </div>
+            <div class="CardGrid">
+                <h2 class="CardGridTitle">DBSnapshot</h2>
+                <div class="cardImg">
+                    <img src="img/StockIndustrial6.jpg" alt="DBSnaphot Project img"/>
                 </div>
             </div>
         </div>
     </div>
     
     <!-- WISE Demo -->
-    <div>
-        <div class="gridCard">
-            <h2 class="gridCardTitle">WISE Demo</h2>
+    <div class="WiseDemo">
+        <div class="CardGrid">
+            <h2 class="CardGridTitle">WISE Demo</h2>
             <p>WISE Demo es una herramienta de simulación de procesos industriales que permite la visualización de los procesos de producción de una manera interactiva y dinámica.</p>
             <button class="launchbtn"> <Lanzar> Lanzar Demo</button>
         </div>
@@ -134,7 +148,7 @@
     </div>
     
     <!-- Nuestros Clientes -->
-    <div>
+    <div class="ClientsGrid">
         <h2>Nuestros Clientes</h2>
         <div class="gridImg">
             <img src="https://w7.pngwing.com/pngs/385/181/png-transparent-vw-logo-icon-thumbnail.png" alt="VW"/>
@@ -143,7 +157,6 @@
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRotPU1DpPfVACXmDaChjHS2_5spZtKs8PoQoXbLPIv8FeRQq_z2YuPEXEMlo-RFZea6zs&usqp=CAU" alt="MBV"/>
             <img src="https://www.liblogo.com/img-logo/ge7667ae63-gestamp-logo-automotive-mobile-audit-software-ease-inc.png" alt="Gestamp"/>
         </div>
-    </div>
     </div>
 </body>
 <footer>
